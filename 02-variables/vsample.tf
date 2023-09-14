@@ -48,11 +48,36 @@ output "boolen" {
     value = var.boolen
   
 }
-
+// printing from the list variable
 output "fromlist"{
     value = "${var.list[0]} is becoming famous now ${var.list[1]} is most used operating system in the it world now i am learning ${var.list[2]}"
 }
-
+// printing from the maps variable 
 output "frommaps" {
     value = "${var.maps["Domain"]}, ${var.maps["Provider"]}"
+}
+// Declaring the variable which is in the sperate variable file 
+variable "city" {}
+
+output "from_terraformtfvar_file" {
+    value = "my fav city is ${var.city}"
+}
+
+variable "state" {}
+
+output "from_terraformtfvar_file_state" {
+  value = "my fav state is ${var.state}"
+}
+
+variable "country" {}
+
+output "from_devtfvar_file_" {
+ value = "my fav country is ${var.country}"
+}
+// if we declare the variable with out value it will ask for value in the cmd line
+variable "total_number_of_state" {}
+
+output "from_cmd_terminal" {
+    value = "total no of states are ${var.total_number_of_state}"
+  
 }
