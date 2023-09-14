@@ -54,5 +54,5 @@ output "fromlist"{
 }
 
 output "frommaps" {
-    value = "${var.maps["Domain"]}, ${var.maps["provider"]}"
+    value = "${var.maps["Domain"]}, ${var.maps["Provider"]}"
 }
