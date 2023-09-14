@@ -50,8 +50,7 @@ output "boolen" {
 }
 
 output "fromlist"{
-    value = "${var.list[0]} is becoming famous now ${var.list[1]} is most used operating system in the it world./
-             now i am learning ${var.list[2]}"
+    value = "${var.list[0]} is becoming famous now ${var.list[1]} is most used operating system in the it world now i am learning ${var.list[2]}"
 }
 
 output "frommaps" {
