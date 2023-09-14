@@ -2,4 +2,4 @@
 # How to supply the varaibles file as a part of the terraform plan ?
 # $ terraform plan -var-file=dev.tfvars 
 
-country =   "Bharath"
+country = "Bharath"
