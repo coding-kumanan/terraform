@@ -10,3 +10,8 @@ resource "aws_instance" "web" {
 output "private_ip_address" {
   value = aws_instance.web.private_dns
 }
+
+output "public_ip_address" {
+    value = aws_instance.web.public_ip
+  
+}
