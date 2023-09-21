@@ -6,3 +6,7 @@ resource "aws_instance" "web" {
     Name = "samplevm"
   }
 }
+
+output "private_ip_address" {
+  value = aws_instance.web.private_dns
+}
