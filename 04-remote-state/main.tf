@@ -7,3 +7,8 @@ tags = {
     Name = "terraform-remote-state"
 }
 }
+
+output "instance_id" {
+    value = aws_instance.remote-state[0].id
+  
+}
