@@ -12,6 +12,6 @@ output "instance_state" {
 }
 
 output "instance_id" {
-    value = aws_instance.remote-state.vpc_security_group_ids
+    value = aws_instance.remote-state.id
   
 }
