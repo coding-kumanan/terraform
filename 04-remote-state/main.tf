@@ -20,5 +20,5 @@ variable "RoboComponents" {
   
 }
 output "Private_ip" {
-    value = aws_instance.remote-state[count.index].private_dns
+    value = aws_instance.remote-state.*.private_dns
 }
