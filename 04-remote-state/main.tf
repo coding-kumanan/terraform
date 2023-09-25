@@ -12,10 +12,10 @@ resource "aws_instance" "remote-state" {
     instance_type = "t3.medium"
 
 tags = {
-    Name = var.RoboComponents[count.index]
+    Name = $var.RoboComponents[count.index]
 }
 }
 variable "RoboComponents" {
-    default = ["catalogue, user, forntend"] 
+    default = ["catalogue", "user", "forntend"] 
   
 }
