@@ -9,3 +9,7 @@ terraform {
     
   }
 }
+
+variable "InstanceCount" {
+    defadefault = 2
+}
