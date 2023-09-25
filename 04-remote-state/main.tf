@@ -9,10 +9,11 @@ tags = {
   
 }
 output "instance_state" {
-  value = aws_instance.remote-state.instance_state
+//have to use count.index if you are creating resources with count
+  value = aws_instance.remote-state.instance_state[count.index]
 }
 
 output "instance_id" {
-    value = aws_instance.remote-state.id
+    value = aws_instance.remote-state.id[count.index]
   
 }
