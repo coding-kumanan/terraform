@@ -6,14 +6,4 @@ resource "aws_instance" "remote-state" {
 tags = {
     Name = "terraform-remote-state"
 }
-  
-}
-output "instance_state" {
-//have to use count.index if you are creating resources with count
-  value = aws_instance.remote-state[count.index].instance_state
-}
-
-output "instance_id" {
-    value = aws_instance.remote-state[count.index].id
-  
 }
