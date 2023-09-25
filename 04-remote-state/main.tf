@@ -12,7 +12,7 @@ resource "aws_instance" "remote-state" {
     instance_type = "t3.medium"
 
 tags = {
-    Name = $var.RoboComponents[count.index]
+    Name = var.RoboComponents[count.index]
 }
 }
 variable "RoboComponents" {
