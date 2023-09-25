@@ -5,10 +5,6 @@ resource "aws_instance" "remote-state" {
     instance_type = "t3.medium"
 
 tags = {
-    Name = "terraform-remote-state"
+    Name = "terraform-remote-state-${count.index}"
 }
-}
-
-output "name" {
-  value = aws_instance.remote-state["${count.index}"].id
 }
