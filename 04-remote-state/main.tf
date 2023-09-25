@@ -19,3 +19,6 @@ variable "RoboComponents" {
     default = ["catalogue", "user", "forntend"] 
   
 }
+output "Private_ip" {
+    value = aws_instance.remote-state.*.private_dns
+}
