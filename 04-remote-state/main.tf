@@ -7,11 +7,15 @@ data "aws_ami" "my-ami" {
 }
 resource "aws_instance" "remote-state" {
 //creting multiple resources using count and count value supplied by variable named instacecount.
-    count         = var.InstanceCount
+    count         = length(var.RoboComponents)
     ami           = data.aws_ami.my-ami.image_id
     instance_type = "t3.medium"
 
 tags = {
-    Name = "terraform-remote-state-${count.index}"
+    Name = var.RoboComponents[count.index]
 }
+}
+variable "RoboComponents" {
+    default = ["catalogue, user, forntend"] 
+  
 }
