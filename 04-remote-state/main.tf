@@ -7,3 +7,6 @@ tags = {
 }
   
 }
+output "instance_state" {
+  value = aws_instance.remote-state.instance_state
+}
