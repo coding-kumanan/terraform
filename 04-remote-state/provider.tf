@@ -11,5 +11,5 @@ terraform {
 }
 
 variable "InstanceCount" {
-    defadefault = 2
+    default = 2
 }
